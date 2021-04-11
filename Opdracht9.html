@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+    var size = 100
+    function myFunction(input){
+        if (input == 1){
+            if (size == 200){
+                alert("Afbeelding kan niet groter")
+            }
+            else{
+                size += 10
+            }
+        }
+        if (input == 2){
+            if (size == 50){
+                alert("Afbeelding kan niet kleiner")
+            }
+            else{
+                size -= 10
+            }
+        }
+        document.getElementById("myImage").height=size.toString();
+        document.getElementById("myImage").width=size.toString();
+        var text = document.getElementById("yeartext");
+        text.textContent = "Afbeelding is " + size.toString() + "x" + size.toString() + " pixels.";
+    }
+    </script>
+</head>
+<body>
+    <img id="myImage" src="Spring.jpg" width ="100" height ="100">
+    </br>
+    <button onclick="myFunction(1)">Vergroten</button>
+    <button onclick="myFunction(2)">Verkleinen</button>
+    <div id="yeartext">Afbeelding is 100x100 pixels.</div>
+</body>
+</html>
