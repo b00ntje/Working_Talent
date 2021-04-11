@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+    function myFunction(){
+            var count = 0
+            var input = document.getElementById("UserInput").value;
+            var test = document.getElementById("UserInput2").value;
+            if (test.length == 0){
+                test = "e";
+            }
+            for (var pos = 0; pos < input.length; pos++){
+                if (input.charAt(pos) == test){
+                    count += 1;
+                }
+            } 
+            alert(test + " komt " + count + " keer voor")
+    }
+    </script>
+</head>
+<body>
+    <input type="text" id="UserInput">
+    <input type="text" id="UserInput2">
+    <button onclick="myFunction()" type="button">Click</button>
+</body>
+</html>

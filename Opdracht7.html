@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+    var season1 = 1
+    var season2 = 1
+    var pics = ['Spring.jpg', 'Summer.jpg', 'Autumn.jpg', 'Winter.jpg']
+    function myFunction(input){
+        if (input == 1){
+            if (season1 < 4){
+                season1 += 1
+            }
+            else {
+                season1 = 1
+            }
+        document.getElementById('myImage1').src=pics[season1-1]
+        }
+        if (input == 2){
+            if (season2 < 4){
+                season2 += 1
+            }
+            else {
+                season2 = 1
+            }
+        document.getElementById('myImage2').src=pics[season2-1]
+        }
+    }
+    function Check(){
+        if (season1 == season2){
+            console.log("HETZELFDE")
+        }
+        else {
+            console.log("NIET HETZELFDE")
+        }
+    }
+    </script>
+</head>
+<body>
+    <img id="myImage1" src="Spring.jpg" style="width:200px">
+    <img id="myImage2" src="Spring.jpg" style="width:200px">
+    </br>
+    <button onclick="myFunction(1)">Verander linkerplaatje</button>
+    <button onclick="myFunction(2)">Verander rechterplaatje</button>
+    <button onclick="Check()">Check plaatjes</button>
+</body>
+</html>

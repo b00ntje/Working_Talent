@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+    function myFunction(input){
+            var input1 = parseInt(document.getElementById("UserInput").value);
+            var input2 = parseInt(document.getElementById("UserInput2").value);
+            if (input == 1){
+                var result = input1 + input2
+            }
+            if (input == 2){
+                var result = input1 - input2
+            }
+            var output = document.getElementById("Output");
+            output.textContent = "Het resultaat is: " + result.toString();
+    }
+    </script>
+</head>
+<body>
+    <input type="number" id="UserInput">
+    <input type="number" id="UserInput2">
+    </br>
+    <button onclick="myFunction(1)" type="button">+</button>
+    <button onclick="myFunction(2)" type="button">-</button>
+    <div id="Output">Het resultaat is:</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+    function myFunction(){
+            var input = document.getElementById("UserInput").value;
+            var pos = input.indexOf("e");
+            if (pos != -1){
+                alert("Er zit een E in!");
+            }
+    }
+    </script>
+</head>
+<body>
+    <input type="text" id="UserInput">
+<button onclick="myFunction()" type="button">Click</button>
+</body>
+</html>
